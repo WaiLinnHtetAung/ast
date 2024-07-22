@@ -9,9 +9,26 @@
 
 .content-wrapper{
     padding: 0px 16%;
+    overflow-x: hidden;
 }
 
-h2 {
+h2, .menu {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
+}
+
+.router-link-active.router-link-exact-active {
+    color: #DD9D3C;
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper{
+        padding: 0px 9%;
+    }
+}
+
+@media (max-width: 900px) {
+    .content-wrapper{
+        padding: 0px 3%;
+    }
 }

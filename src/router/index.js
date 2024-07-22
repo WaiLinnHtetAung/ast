@@ -7,7 +7,10 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@/components/system/NoPage.vue')
+  }
 ]
 
 const router = createRouter({
