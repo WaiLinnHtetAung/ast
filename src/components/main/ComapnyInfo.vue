@@ -1,6 +1,6 @@
 <template>
     <div class="content-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-20">
-        <div class="col-span-1 flex flex-col items-start gap-5" v-for="(info, index) in infos" :key="index">
+        <div class="col-span-1 flex flex-col items-start gap-5" data-aos="fade-up" v-for="(info, index) in infos" :key="index">
             <img class="h-[70px] object-cover" :src="info.img" alt="">
             <h2 class="text-2xl font-bold">{{info.title}}</h2>
             <p class="text-start text-[16px] text-[#5a5a5a] leading-6">

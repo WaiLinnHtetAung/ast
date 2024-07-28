@@ -8,6 +8,16 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/about',
+    name: "about",
+    component: () => import('@/views/About.vue')
+  },
+  {
+    path: '/contact',
+    name: "contact",
+    component: () => import('@/views/Contact.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     component: () => import('@/components/system/NoPage.vue')
   }

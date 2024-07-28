@@ -11,9 +11,11 @@
         <p class="px-[5%] sm:px-[15%] md:px-[30%] text-gray-200 mb-5" data-aos="zoom-in">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque corporis sint eligendi voluptatum recusandae sed exercitationem consequatur amet veritatis aliquid.
         </p>
-        <button data-aos="fade-up" class="text-sm border border-gray-100 text-white p-2 lg:p-3 px-14 lg:px-16 rounded-full hover:bg-[#DD9D3C] hover:border-[#DD9D3C] duration-500">
-            GET START
-        </button>
+        <router-link to="/contact">
+            <button data-aos="fade-up" class="text-sm border border-gray-100 text-white p-2 lg:p-3 px-14 lg:px-16 rounded-full hover:bg-[#DD9D3C] hover:border-[#DD9D3C] duration-500">
+                GET START
+            </button>
+        </router-link>
       </div>
   </div>
 </template>

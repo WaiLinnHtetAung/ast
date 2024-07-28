@@ -3,22 +3,24 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-20">
             <div class="col-spans-1">
                 <div class="flex flex-col items-start gap-8">
-                    <div class="flex items-center gap-5">
+                    <div class="flex items-center gap-5" data-aos="fade-right">
                         <div class="w-[60px] h-[2px] bg-[#DD9D3C]"></div>
                         <h2 class="text-lg font-bold">DEALING WITH YOUR WORRIES</h2>
                     </div>
-                    <div class="flex flex-col items-start gap-2">
+                    <div class="flex flex-col items-start gap-2" data-aos="fade-right">
                         <h2 class="text-4xl font-bold">If Your Question Is Not </h2>
                         <h2 class="text-4xl font-bold">Here <span class="text-[#DD9D3C]">Contact Us</span></h2>
                     </div>
-                    <p class="text-start pe-10">
+                    <p class="text-start pe-10" data-aos="fade-right">
                         If you have concerns or queries that are not addressed on this page, feel free to reach out to us using the contact form below. We are here to help you with any questions you may have.
                     </p>
-                    <Button name="Contact Us" />
+                    <router-link to="/contact">
+                        <Button name="Contact Us" />
+                    </router-link>
                 </div>
             </div>
             <div class="col-spans-1">
-                <div class="ms-0 lg:ms-5">
+                <div class="ms-0 lg:ms-5" data-aos="fade-left">
                     <div class="border border-slate-300 px-5 py-6 rounded-lg mb-3 h-20 overflow-hidden duration-300" 
                         :class="{'h-48': index == currentIndex}" 
                         v-for="(question, index) in questions" 

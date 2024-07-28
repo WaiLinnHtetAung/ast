@@ -17,11 +17,11 @@
             </div>
         </div>
     </nav>
-  <nav class="p-0 m-0 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-10">
+  <nav ref="nav"  :class="{ 'fixed top-0 left-0 right-0 z-10 shadow-lg': isSticky, 'relative': !isSticky }" class="p-0 m-0 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-10">
     <div
       class="content-wrapper flex flex-wrap items-center justify-between mx-auto p-4 h-[90px]"
     >
-      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <router-link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img
           src="@/assets/images/logo.png"
           class="w-20"
@@ -31,7 +31,7 @@
           class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
           >Construction</span
         >
-      </a>
+      </router-link>
       <button
         data-collapse-toggle="navbar-dropdown"
         type="button"
@@ -82,7 +82,7 @@
             >
           </li>
           <li>
-            <router-link to="contact"
+            <router-link to="/contact"
               class="menu block py-2 px-3 font-bold text-slate-800 rounded md:bg-transparent md:p-0 "
               aria-current="page"
               >Contact</router-link
@@ -95,7 +95,31 @@
 </template>
 
 <script>
-export default {};
+  import { onMounted, onUnmounted, ref } from 'vue';
+  export default {
+    setup() {
+      const nav = ref(null);
+      const isSticky = ref(false);
+
+      const handleScroll = () => {
+        if(window.scrollY > nav.value.offsetTop) {
+          isSticky.value = true;
+        } else {
+          isSticky.value = false;
+        }
+      }
+
+      onMounted(() => {
+        window.addEventListener('scroll', handleScroll);
+      });
+
+      onUnmounted(() => {
+        window.removeEventListener('scroll', handleScroll);
+      });
+
+      return {nav, isSticky}
+    }
+};
 </script>
 
 <style scoped></style>

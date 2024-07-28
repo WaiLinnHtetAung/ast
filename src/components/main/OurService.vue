@@ -12,6 +12,7 @@
                     " 
                     :class="{'bg-[#DD9D3C] before:border-l-[#DD9D3C]': currentService.slug == service.slug}"
                     v-for="(service, i) in services" :key="i"
+                    data-aos="fade-right"
                     @click="toggleService(i)"
                 >
                     <img class="w-[35px] md:w-auto" :src="service.img" :class="{'block group-hover:hidden' : currentService.slug != service.slug, 'hidden' : currentService.slug == service.slug}" alt="">
@@ -20,7 +21,7 @@
                 </div>
             </div>
             <div class="col-span-2 flex flex-col">
-                <div class="border flex-grow bg-[url('@/assets/images/services/site.jpg')] bg-cover">
+                <div class="border flex-grow bg-[url('@/assets/images/services/site.jpg')] bg-cover" data-aos="fade-up">
                     <div class="flex flex-col items-start w-[100%] md:w-[80%] h-[100%] md:h-[70%] mt-14 md:mt-24 ms-0 md:ms-10 py-8 px-12 bg-[#000000d3] opacity-80">
                         <h2 class="text-white text-3xl font-extrabold mb-5">{{currentService.title}}</h2>
                         <span class="text-justify text-white">
