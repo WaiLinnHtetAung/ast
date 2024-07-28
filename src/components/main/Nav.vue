@@ -17,7 +17,7 @@
             </div>
         </div>
     </nav>
-  <nav ref="nav"  :class="{ 'fixed top-0 left-0 right-0 z-10 shadow-lg': isSticky, 'relative': !isSticky }" class="p-0 m-0 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-10">
+  <nav ref="nav"  :class="{ 'fixed top-0 left-0 right-0 z-50 shadow-lg': isSticky, 'relative': !isSticky }" class="p-0 m-0 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-10">
     <div
       class="content-wrapper flex flex-wrap items-center justify-between mx-auto p-4 h-[90px]"
     >
